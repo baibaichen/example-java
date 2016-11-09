@@ -4,5 +4,10 @@ jdk:
   - oraclejdk8
 sudo: false # faster builds
 
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t 7fde6257-6c58-4a49-acc1-e0e50fd0180d
